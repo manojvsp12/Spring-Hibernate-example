@@ -1,1 +1,5 @@
 
+1.	Spring boot with JPA implementation
+2.	Front end on HTML with Thymeleaf and Jquery
+3.	I18N implemented
+4.	Exception handling, transaction management, H2 DB, validator, ID generator for entity
