@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+      <script type="text/JavaScript" src="../js/taskview.js"></script>
+      <link rel="stylesheet" href="../css/taskview.css">
+      <title th:inline="text">[[${page_title}]]</title>
+   </head>
+   <body>
+      <div class="center-div">
+         <h3 th:inline="text">[[${view_tasks_heading}]]</h3>
+         <label th:inline="text">[[${filter_by_project_label}]]</label>
+         <select id="projects">
+			<option disabled selected th:inline="text">[[${select_project_dropdown_label}]]</option>
+            <option id="all" th:inline="text">[[${all_projects_label}]]</option>
+         </select>
+         <br/>
+         <br/>
+         <div class="projectdetails">
+         </div>
+		 <footer>
+			<br/>
+			<a href="home" style="center" th:inline="text">[[${cancel_link}]]</a>
+		</footer>
+      </div>	  
+   </body>
+</html>

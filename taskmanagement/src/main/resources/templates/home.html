@@ -1,0 +1,27 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+	<link rel="stylesheet" href="../css/homepage.css">
+    <title th:inline="text">[[${page_title}]]</title>
+  </head>
+  <body>
+	<div class="center-div">
+		<h3 th:inline="text">[[${home_heading}]]</h3>
+		<table>
+			<tr>
+				<td>
+					<a href="assigntasks" th:inline="text">[[${assign_tasks_link}]]</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="taskview" th:inline="text">[[${task_view_link}]]</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+  </body>
+</html>

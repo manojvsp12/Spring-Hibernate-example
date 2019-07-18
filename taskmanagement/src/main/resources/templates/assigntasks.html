@@ -1,0 +1,74 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+	<link rel="stylesheet" href="../css/assigntask.css">
+	<script src="../js/assigntasks.js"></script>
+    <title>Task Management</title>
+  </head>
+  <body>
+	<div class="center-div">
+		<h3 th:inline="text">[[${assign_task_heading}]]Assign tasks</h3>
+		<span id="alert">
+		<label id="alert-message"></label>
+		<a href ="#" id ="close" onclick="clearAlert()" class="alert-close" hidden title="close">×</a></span>
+		<table>
+			<tr>
+				<td>
+					<label th:inline="text">[[${project_label}]] *</label>
+				</td>
+				<td>
+					<select id="projects">
+						<option disabled selected th:inline="text">[[${select_project_label}]]</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label th:inline="text">[[${desc_label}]] *</label>
+				</td>
+				<td>
+					<input id="desc"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label th:inline="text">[[${start_date_label}]] *</label>
+				</td>
+				<td>
+					<input id="startDate"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label th:inline="text">[[${end_date_label}]] *</label>
+				</td>
+				<td>
+					<input id="endDate"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label th:inline="text">[[${emp_label}]] *</label>
+				</td>
+				<td>
+					<select id="employees" multiple>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button onclick="addTask()" th:inline="text">[[${add_task_button_label}]]</button>
+				</td>
+				<td>
+					<a href="home">
+						<button th:inline="text">[[${cancel_button_label}]]</button>
+					</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+  </body>
+</html>
